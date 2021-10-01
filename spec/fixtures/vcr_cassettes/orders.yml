@@ -1,0 +1,210 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.example.com/connect/token
+    body:
+      encoding: UTF-8
+      string: username=xxx%2B2%xxx.com&password=ASillyPassword123&grant_type=password&client_id=mx-transact-postman
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 23 Apr 2021 15:52:55 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d72d8d86d6a24b008b6a34d27de1c9a4a1619193174; expires=Sun, 23-May-21
+        15:52:54 GMT; path=/; domain=.moviexchange.com; HttpOnly; SameSite=Lax
+      Cache-Control:
+      - no-cache
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Request-Context:
+      - appId=cid-v1:6142e5c1-6925-4049-9075-bc9b93f7bce8
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '09a108319b000053c18cb64000000001'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 644842fc280253c1-LHR
+    body:
+      encoding: ASCII-8BIT
+      string: '{"token_type":"Bearer","access_token":"xxx","expires_in":43200}'
+  recorded_at: Fri, 23 Apr 2021 15:52:55 GMT
+- request:
+    method: post
+    uri: https://www.example.com/mxt/ticketing/v1/cinema-chains/6e66f9df-6c6f-4a09-877c-1e77ae5e426e/orders
+    body:
+      encoding: UTF-8
+      string: '{"ticketTypes":[{"showtimeId":"83bf2953-dc25-4d2b-fec3-08d8fef9d29d","id":"0001","quantity":3},{"showtimeId":"83bf2953-dc25-4d2b-fec3-08d8fef9d29d","id":"0003","quantity":2}]}'
+    headers:
+      Authorization:
+      - Bearer xxx
+      Mx-Api-Client-Secret:
+      - XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 23 Apr 2021 15:52:56 GMT
+      Mx-Correlation-Id:
+      - 6a060e15-9ff2-48ae-b1b5-7c56f0c6d5c9
+      Request-Context:
+      - appId=cid-v1:8f9f60f1-0fa5-4a08-8a3b-6f5ed4e2ad56
+      Server:
+      - Kestrel
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '436'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"e790643d-7586-49a6-8478-b2b052c0035a","cinemaChainId":"6e66f9df-6c6f-4a09-877c-1e77ae5e426e","totalPrice":52.0,"bookingFee":0.0,"showtimes":[{"showtimeId":"83bf2953-dc25-4d2b-fec3-08d8fef9d29d","siteId":"dad76795-6bca-4788-568f-08d561ec8a55","groupedTickets":[{"ticketTypeId":"0001","quantity":3,"ticketTypeDescription":"Adult","priceEach":12.0,"ticketIds":[1,2,3],"isPackageTicket":false},{"ticketTypeId":"0003","quantity":2,"ticketTypeDescription":"Child","priceEach":8.0,"ticketIds":[4,5],"isPackageTicket":false}],"seats":[{"rowName":"M","seatName":"21","ticketId":1},{"rowName":"M","seatName":"20","ticketId":2},{"rowName":"M","seatName":"19","ticketId":3},{"rowName":"M","seatName":"18","ticketId":4},{"rowName":"M","seatName":"17","ticketId":5}],"seatsRequireSelection":false}],"expirationTimeUtc":"2021-04-23T15:59:36.8976107Z"}'
+  recorded_at: Fri, 23 Apr 2021 15:52:57 GMT
+- request:
+    method: get
+    uri: https://www.example.com/mxt/ticketing/v1/cinema-chains/6e66f9df-6c6f-4a09-877c-1e77ae5e426e/orders/e790643d-7586-49a6-8478-b2b052c0035a
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer xxx
+      Mx-Api-Client-Secret:
+      - XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 23 Apr 2021 15:53:35 GMT
+      Mx-Correlation-Id:
+      - 4202d2d2-c15e-4a3f-9629-ce075dcc3eb7
+      Request-Context:
+      - appId=cid-v1:8f9f60f1-0fa5-4a08-8a3b-6f5ed4e2ad56
+      Server:
+      - Kestrel
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '436'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"e790643d-7586-49a6-8478-b2b052c0035a","cinemaChainId":"6e66f9df-6c6f-4a09-877c-1e77ae5e426e","totalPrice":52.0,"bookingFee":0.0,"showtimes":[{"showtimeId":"83bf2953-dc25-4d2b-fec3-08d8fef9d29d","siteId":"dad76795-6bca-4788-568f-08d561ec8a55","groupedTickets":[{"ticketTypeId":"0001","quantity":3,"ticketTypeDescription":"Adult","priceEach":12.0,"ticketIds":[1,2,3],"isPackageTicket":false},{"ticketTypeId":"0003","quantity":2,"ticketTypeDescription":"Child","priceEach":8.0,"ticketIds":[4,5],"isPackageTicket":false}],"seats":[{"rowName":"M","seatName":"21","ticketId":1},{"rowName":"M","seatName":"20","ticketId":2},{"rowName":"M","seatName":"19","ticketId":3},{"rowName":"M","seatName":"18","ticketId":4},{"rowName":"M","seatName":"17","ticketId":5}],"seatsRequireSelection":false}],"expirationTimeUtc":"2021-04-23T15:59:36.8976107Z"}'
+  recorded_at: Fri, 23 Apr 2021 15:53:36 GMT
+- request:
+    method: post
+    uri: https://www.example.com/mxt/ticketing/v1/cinema-chains/6e66f9df-6c6f-4a09-877c-1e77ae5e426e/orders/d1354720-d110-4e53-88bc-125d46026376/customer
+    body:
+      encoding: UTF-8
+      string: '{"name":"Bob Smith","email":"bob@example.com","phone":"555-5555","loyalty":null}'
+    headers:
+      Authorization:
+      - Bearer xxx
+      Mx-Api-Client-Secret:
+      - XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Fri, 23 Apr 2021 15:53:58 GMT
+      Mx-Correlation-Id:
+      - 28b09d6a-b132-42ce-8ce5-905b53f5f6c4
+      Request-Context:
+      - appId=cid-v1:8f9f60f1-0fa5-4a08-8a3b-6f5ed4e2ad56
+      Server:
+      - Kestrel
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Fri, 23 Apr 2021 15:53:59 GMT
+- request:
+    method: post
+    uri: https://www.example.com/mxt/ticketing/v1/cinema-chains/6e66f9df-6c6f-4a09-877c-1e77ae5e426e/orders/e790643d-7586-49a6-8478-b2b052c0035a/customer
+    body:
+      encoding: UTF-8
+      string: '{"name":"Bob Smith","email":"bob@example.com","phone":"555-5555","loyalty":null}'
+    headers:
+      Authorization:
+      - Bearer xxx
+      Mx-Api-Client-Secret:
+      - XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Fri, 23 Apr 2021 15:54:12 GMT
+      Mx-Correlation-Id:
+      - 53612ad6-92de-4ea3-a609-2807b2b9139e
+      Request-Context:
+      - appId=cid-v1:8f9f60f1-0fa5-4a08-8a3b-6f5ed4e2ad56
+      Server:
+      - Kestrel
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Fri, 23 Apr 2021 15:54:13 GMT
+recorded_with: VCR 6.0.0

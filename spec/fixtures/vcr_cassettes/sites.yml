@@ -1,0 +1,149 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.example.com/connect/token
+    body:
+      encoding: UTF-8
+      string: username=xxx%2B2%40xxx.com&password=ASillyPassword123&grant_type=password&client_id=mx-transact-postman
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 23 Apr 2021 12:17:39 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dacbed25d99fd8959ba8206f3ed021e351619180258; expires=Sun, 23-May-21
+        12:17:38 GMT; path=/; domain=.moviexchange.com; HttpOnly; SameSite=Lax
+      Cache-Control:
+      - no-cache
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Request-Context:
+      - appId=cid-v1:6142e5c1-6925-4049-9075-bc9b93f7bce8
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '09a0431d640000e680db911000000001'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 644707a8adf6e680-LHR
+    body:
+      encoding: ASCII-8BIT
+      string: '{"token_type":"Bearer","access_token":"xxx","expires_in":43200}'
+  recorded_at: Fri, 23 Apr 2021 12:17:39 GMT
+- request:
+    method: get
+    uri: https://www.example.com/mxs/reference-data/v1/sites/e00aee11-d135-484c-ee73-08d51f55f8d5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer xxx
+      Mx-Api-Client-Secret:
+      - XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 23 Apr 2021 12:17:39 GMT
+      Mx-Correlation-Id:
+      - c3f4fd02-3e69-4f1d-a23d-76d9ef2dd530
+      Request-Context:
+      - appId=cid-v1:8f9f60f1-0fa5-4a08-8a3b-6f5ed4e2ad56
+      Server:
+      - Kestrel
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '299'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"e00aee11-d135-484c-ee73-08d51f55f8d5","name":"ABC Cinema 6","address":{"addressLine1":"6630
+        Hollywood Boulevard","addressLine2":"CA 90028","city":"Los Angeles"},"location":{"latitude":34.1015880,"longitude":-118.3341840},"cinemaChainId":"d90b9017-1abd-e711-80c2-000d3ad0511b","timeZone":{"name":"Pacific
+        Standard Time","ianaName":"America/Los_Angeles","currentOffsetFromUtcInHours":-7.0}}'
+  recorded_at: Fri, 23 Apr 2021 12:17:40 GMT
+- request:
+    method: get
+    uri: https://www.example.com/mxs/reference-data/v1/cinema-chains/d90b9017-1abd-e711-80c2-000d3ad0511b/sites
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer xxx
+      Mx-Api-Client-Secret:
+      - XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 23 Apr 2021 12:23:26 GMT
+      Mx-Correlation-Id:
+      - 4e52b4b6-fbe8-453d-b271-1e72100f2225
+      Request-Context:
+      - appId=cid-v1:8f9f60f1-0fa5-4a08-8a3b-6f5ed4e2ad56
+      Server:
+      - Kestrel
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '490'
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":"e00aee11-d135-484c-ee73-08d51f55f8d5","name":"ABC Cinema 6","address":{"addressLine1":"6630
+        Hollywood Boulevard","addressLine2":"CA 90028","city":"Los Angeles"},"location":{"latitude":34.1015880,"longitude":-118.3341840},"cinemaChainId":"d90b9017-1abd-e711-80c2-000d3ad0511b","timeZone":{"name":"Pacific
+        Standard Time","ianaName":"America/Los_Angeles","currentOffsetFromUtcInHours":-7.0}},{"id":"44ae482b-a817-4eb1-ee74-08d51f55f8d5","name":"ABC
+        Roxy","address":{"addressLine1":"800 Mission Street","addressLine2":"CA 94103","city":"San
+        Francisco"},"location":{"latitude":37.7842190,"longitude":-122.4046230},"cinemaChainId":"d90b9017-1abd-e711-80c2-000d3ad0511b","timeZone":{"name":"Pacific
+        Standard Time","ianaName":"America/Los_Angeles","currentOffsetFromUtcInHours":-7.0}},{"id":"ccde07c7-cfe7-4002-6822-08d7efd52b70","name":"ABC
+        Cinema 6","address":{},"location":{"latitude":0.0000000,"longitude":0.0000000},"cinemaChainId":"d90b9017-1abd-e711-80c2-000d3ad0511b","timeZone":{"name":"Pacific
+        Standard Time","ianaName":"America/Los_Angeles","currentOffsetFromUtcInHours":-7.0}},{"id":"5c1bcd16-96be-46e0-6823-08d7efd52b70","name":"ABC
+        Roxy","address":{},"location":{"latitude":0.0000000,"longitude":0.0000000},"cinemaChainId":"d90b9017-1abd-e711-80c2-000d3ad0511b","timeZone":{"name":"Pacific
+        Standard Time","ianaName":"America/Los_Angeles","currentOffsetFromUtcInHours":-7.0}},{"id":"26742f7d-6814-4a0a-6824-08d7efd52b70","name":"ABC
+        Cinema 10","address":{},"location":{"latitude":0.0000000,"longitude":0.0000000},"cinemaChainId":"d90b9017-1abd-e711-80c2-000d3ad0511b","timeZone":{"name":"Pacific
+        Standard Time","ianaName":"America/Los_Angeles","currentOffsetFromUtcInHours":-7.0}}]'
+  recorded_at: Fri, 23 Apr 2021 12:23:27 GMT
+recorded_with: VCR 6.0.0

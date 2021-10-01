@@ -1,0 +1,267 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.example.com/connect/token
+    body:
+      encoding: UTF-8
+      string: username=xxx%2B2%40xxx.com&password=ASillyPassword123&grant_type=password&client_id=mx-transact-postman
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 23 Apr 2021 11:31:51 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dc2b1fb90ed04ecbfe5631b5785b2822a1619177510; expires=Sun, 23-May-21
+        11:31:50 GMT; path=/; domain=.moviexchange.com; HttpOnly; SameSite=Lax
+      Cache-Control:
+      - no-cache
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Request-Context:
+      - appId=cid-v1:6142e5c1-6925-4049-9075-bc9b93f7bce8
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '09a0192e38000053c8ef894000000001'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6446c4905ab353c8-LHR
+    body:
+      encoding: ASCII-8BIT
+      string: '{"token_type":"Bearer","access_token":"xxx","expires_in":43200}'
+  recorded_at: Fri, 23 Apr 2021 11:31:51 GMT
+- request:
+    method: get
+    uri: https://www.example.com/mxs/reference-data/v1/cinema-chains
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer xxx
+      Mx-Api-Client-Secret:
+      - XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 23 Apr 2021 11:31:52 GMT
+      Mx-Correlation-Id:
+      - a7db4dcc-c856-4f94-a516-97053a81f7b4
+      Request-Context:
+      - appId=cid-v1:8f9f60f1-0fa5-4a08-8a3b-6f5ed4e2ad56
+      Server:
+      - Kestrel
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '508'
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":"d90b9017-1abd-e711-80c2-000d3ad0511b","name":"Veezi USA Sales
+        Account","countryCode":"US","configuration":{"items":{"enabled":false,"itemsOnlyOrdersEnabled":false},"refunds":{"enabled":true,"canRefundAfterShowtimeStart":true,"partialRefundsEnabled":false},"loyalty":{"enabled":false},"bookingEdits":{"seatSwaps":{"enabled":false},"beginPreparationEnabled":false},"ticketing":{"requiresClientPaymentToken":false,"canResetOrderExpiry":true,"numberOfMinutesAfterShowtimeStartToAllowTicketSales":0,"allowsCustomerTaxDetails":false,"allowBookingNotes":false}}},{"id":"6e66f9df-6c6f-4a09-877c-1e77ae5e426e","name":"Demo
+        Cinemas","countryCode":"US","configuration":{"items":{"enabled":false,"itemsOnlyOrdersEnabled":false},"refunds":{"enabled":true,"canRefundAfterShowtimeStart":true,"partialRefundsEnabled":true},"loyalty":{"enabled":true},"bookingEdits":{"seatSwaps":{"enabled":true},"beginPreparationEnabled":false},"ticketing":{"requiresClientPaymentToken":false,"canResetOrderExpiry":true,"numberOfMinutesAfterShowtimeStartToAllowTicketSales":0,"allowsCustomerTaxDetails":false,"allowBookingNotes":false}}},{"id":"b0093158-2f24-48c0-b4ef-6c9ec9852390","name":"ABC
+        Cinema","countryCode":"US","configuration":{"items":{"enabled":false,"itemsOnlyOrdersEnabled":false},"refunds":{"enabled":true,"canRefundAfterShowtimeStart":false,"partialRefundsEnabled":false},"loyalty":{"enabled":true},"bookingEdits":{"seatSwaps":{"enabled":false},"beginPreparationEnabled":false},"ticketing":{"requiresClientPaymentToken":false,"canResetOrderExpiry":true,"numberOfMinutesAfterShowtimeStartToAllowTicketSales":15,"allowsCustomerTaxDetails":false,"allowBookingNotes":false}}},{"id":"9d85501e-a65f-40b3-b933-bbd707948dfb","name":"XYZ
+        Cinema","countryCode":"US","configuration":{"items":{"enabled":false,"itemsOnlyOrdersEnabled":false},"refunds":{"enabled":true,"canRefundAfterShowtimeStart":false,"partialRefundsEnabled":false},"loyalty":{"enabled":false},"bookingEdits":{"seatSwaps":{"enabled":false},"beginPreparationEnabled":false},"ticketing":{"requiresClientPaymentToken":false,"canResetOrderExpiry":true,"numberOfMinutesAfterShowtimeStartToAllowTicketSales":0,"allowsCustomerTaxDetails":false,"allowBookingNotes":false}}}]'
+  recorded_at: Fri, 23 Apr 2021 11:31:53 GMT
+- request:
+    method: get
+    uri: https://www.example.com/mxs/reference-data/v1/cinema-chains
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer xxx
+      Mx-Api-Client-Secret:
+      - XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 23 Apr 2021 11:41:11 GMT
+      Mx-Correlation-Id:
+      - b8922760-4d6c-475f-a8df-e7466e58459b
+      Request-Context:
+      - appId=cid-v1:8f9f60f1-0fa5-4a08-8a3b-6f5ed4e2ad56
+      Server:
+      - Kestrel
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '508'
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":"d90b9017-1abd-e711-80c2-000d3ad0511b","name":"Veezi USA Sales
+        Account","countryCode":"US","configuration":{"items":{"enabled":false,"itemsOnlyOrdersEnabled":false},"refunds":{"enabled":true,"canRefundAfterShowtimeStart":true,"partialRefundsEnabled":false},"loyalty":{"enabled":false},"bookingEdits":{"seatSwaps":{"enabled":false},"beginPreparationEnabled":false},"ticketing":{"requiresClientPaymentToken":false,"canResetOrderExpiry":true,"numberOfMinutesAfterShowtimeStartToAllowTicketSales":0,"allowsCustomerTaxDetails":false,"allowBookingNotes":false}}},{"id":"6e66f9df-6c6f-4a09-877c-1e77ae5e426e","name":"Demo
+        Cinemas","countryCode":"US","configuration":{"items":{"enabled":false,"itemsOnlyOrdersEnabled":false},"refunds":{"enabled":true,"canRefundAfterShowtimeStart":true,"partialRefundsEnabled":true},"loyalty":{"enabled":true},"bookingEdits":{"seatSwaps":{"enabled":true},"beginPreparationEnabled":false},"ticketing":{"requiresClientPaymentToken":false,"canResetOrderExpiry":true,"numberOfMinutesAfterShowtimeStartToAllowTicketSales":0,"allowsCustomerTaxDetails":false,"allowBookingNotes":false}}},{"id":"b0093158-2f24-48c0-b4ef-6c9ec9852390","name":"ABC
+        Cinema","countryCode":"US","configuration":{"items":{"enabled":false,"itemsOnlyOrdersEnabled":false},"refunds":{"enabled":true,"canRefundAfterShowtimeStart":false,"partialRefundsEnabled":false},"loyalty":{"enabled":true},"bookingEdits":{"seatSwaps":{"enabled":false},"beginPreparationEnabled":false},"ticketing":{"requiresClientPaymentToken":false,"canResetOrderExpiry":true,"numberOfMinutesAfterShowtimeStartToAllowTicketSales":15,"allowsCustomerTaxDetails":false,"allowBookingNotes":false}}},{"id":"9d85501e-a65f-40b3-b933-bbd707948dfb","name":"XYZ
+        Cinema","countryCode":"US","configuration":{"items":{"enabled":false,"itemsOnlyOrdersEnabled":false},"refunds":{"enabled":true,"canRefundAfterShowtimeStart":false,"partialRefundsEnabled":false},"loyalty":{"enabled":false},"bookingEdits":{"seatSwaps":{"enabled":false},"beginPreparationEnabled":false},"ticketing":{"requiresClientPaymentToken":false,"canResetOrderExpiry":true,"numberOfMinutesAfterShowtimeStartToAllowTicketSales":0,"allowsCustomerTaxDetails":false,"allowBookingNotes":false}}}]'
+  recorded_at: Fri, 23 Apr 2021 11:41:12 GMT
+- request:
+    method: get
+    uri: https://www.example.com/mxs/reference-data/v1/cinema-chains/919b3826-69d2-e811-a4b7-fc4dd4f19e72
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer xxx
+      Mx-Api-Client-Secret:
+      - XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 23 Apr 2021 11:45:17 GMT
+      Mx-Correlation-Id:
+      - 53aa3a48-4594-4fcc-8664-942b2e61d8d8
+      Request-Context:
+      - appId=cid-v1:8f9f60f1-0fa5-4a08-8a3b-6f5ed4e2ad56
+      Server:
+      - Kestrel
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '143'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errorDescription":"Cinema chain [919b3826-69d2-e811-a4b7-fc4dd4f19e72]
+        not found.","errorCode":40001,"errorCodeDescription":"The requested cinema
+        chain cannot be found."}'
+  recorded_at: Fri, 23 Apr 2021 11:45:18 GMT
+- request:
+    method: get
+    uri: https://www.example.com/mxs/reference-data/v1/cinema-chains/b0093158-2f24-48c0-b4ef-6c9ec9852390
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer xxx
+      Mx-Api-Client-Secret:
+      - XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 23 Apr 2021 11:46:28 GMT
+      Mx-Correlation-Id:
+      - 3f68dc2f-b6ee-4cd3-b6f0-309acea80ef8
+      Request-Context:
+      - appId=cid-v1:8f9f60f1-0fa5-4a08-8a3b-6f5ed4e2ad56
+      Server:
+      - Kestrel
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '329'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"b0093158-2f24-48c0-b4ef-6c9ec9852390","name":"ABC Cinema","countryCode":"US","configuration":{"items":{"enabled":false,"itemsOnlyOrdersEnabled":false},"refunds":{"enabled":true,"canRefundAfterShowtimeStart":false,"partialRefundsEnabled":false},"loyalty":{"enabled":true},"bookingEdits":{"seatSwaps":{"enabled":false},"beginPreparationEnabled":false},"ticketing":{"requiresClientPaymentToken":false,"canResetOrderExpiry":true,"numberOfMinutesAfterShowtimeStartToAllowTicketSales":15,"allowsCustomerTaxDetails":false,"allowBookingNotes":false}}}'
+  recorded_at: Fri, 23 Apr 2021 11:46:29 GMT
+- request:
+    method: get
+    uri: https://www.example.com/mxs/reference-data/v1/cinema-chains/d90b9017-1abd-e711-80c2-000d3ad0511b
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer xxx
+      Mx-Api-Client-Secret:
+      - XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 23 Apr 2021 12:05:14 GMT
+      Mx-Correlation-Id:
+      - 86a165ca-c858-47d6-9526-c68df4711360
+      Request-Context:
+      - appId=cid-v1:8f9f60f1-0fa5-4a08-8a3b-6f5ed4e2ad56
+      Server:
+      - Kestrel
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '334'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"d90b9017-1abd-e711-80c2-000d3ad0511b","name":"Veezi USA Sales
+        Account","countryCode":"US","configuration":{"items":{"enabled":false,"itemsOnlyOrdersEnabled":false},"refunds":{"enabled":true,"canRefundAfterShowtimeStart":true,"partialRefundsEnabled":false},"loyalty":{"enabled":false},"bookingEdits":{"seatSwaps":{"enabled":false},"beginPreparationEnabled":false},"ticketing":{"requiresClientPaymentToken":false,"canResetOrderExpiry":true,"numberOfMinutesAfterShowtimeStartToAllowTicketSales":0,"allowsCustomerTaxDetails":false,"allowBookingNotes":false}}}'
+  recorded_at: Fri, 23 Apr 2021 12:05:15 GMT
+recorded_with: VCR 6.0.0
